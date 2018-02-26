@@ -15,6 +15,6 @@ export class TodoService{
     }
 
     getTodos(){
-        return this.http.get(this.TodosUrl+'?apiKey='+this.apiKey).map(res => res.JSON());//returns JSON
+        return this.http.get(this.TodosUrl+'?apiKey='+this.apiKey).map(res => res.json());//returns JSON
     }
 }
