@@ -19,7 +19,7 @@ export class TodosPage {
             this.todos = todos;
         });
     }
-    todoSelected(event, workout){
+    todoSelected(event, todo){
         this.navCtrl.push(TodoDetailsPage, {
             todo : todo
         });  

@@ -8,10 +8,10 @@ import { AboutPage } from '../pages/about/about';
 import { AddPage } from '../pages/add-Todo/add';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TodosPage } from '../pages/todos/todos';
+import { TodoDetailsPage } from '../pages/todo-details/todo-details'
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
-
 
 @NgModule({
   declarations: [
@@ -19,6 +19,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     AddPage,
     TodosPage,
+    TodoDetailsPage,
     TabsPage
   ],
   imports: [
@@ -32,6 +33,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     AddPage,
     TodosPage,
+    TodoDetailsPage,
     TabsPage
   ],
   providers: [
