@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { TodosPage } from '../Todos/Todos';
+import { TodosPage } from '../todos/todos';
 import { AboutPage } from '../about/about';
 import { AddPage } from '../add-Todo/add';
 
