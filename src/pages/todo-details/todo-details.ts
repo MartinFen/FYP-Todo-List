@@ -10,7 +10,8 @@ export class TodoDetailsPage {
     public todo:any;
     public result:any;
     constructor(public navCtrl: NavController, public params:NavParams, TodoService:TodoService) {
-        this.todo = params.get('todos');
+        this.todo = params.get('todo');//changed the get from todos to todo and it fixed the issue for data being displayed
+        console.log("debuging here");
     }
 
 }

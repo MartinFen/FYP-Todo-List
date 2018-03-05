@@ -13,7 +13,7 @@ export class TodoService{
         this.apiKey = 'VsOmLzX82en7icOW1YvhJ3be96QHLd14';
         this.TodosUrl = 'https://api.mlab.com/api/1/databases/mytododb/collections/Todos';
     }
-
+    //get method for pulling data from the Db
     getTodos(){
         return this.http.get(this.TodosUrl+'?apiKey='+this.apiKey).map(res => res.json());//returns JSON
     }
