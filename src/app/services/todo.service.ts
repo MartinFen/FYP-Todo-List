@@ -17,4 +17,12 @@ export class TodoService{
     getTodos(){
         return this.http.get(this.TodosUrl+'?apiKey='+this.apiKey).map(res => res.json());//returns JSON
     }
+
+    addTodo(todo) {
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        return this.http.post(this.TodosUrl + '?apiKey=' + this.apiKey,
+            JSON.stringify(todo), { headers: headers })
+            .map(res => res.json());
+    }
 }
