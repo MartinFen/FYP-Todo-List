@@ -28,16 +28,16 @@ export class TodoService{
             JSON.stringify(todo), { headers: headers })
             .map(res => res.json());
     }
-    //needs to update todo by id
+    
     updateTodo(todo) {
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
-        return this.http.put(this.TodosUrl + "/" + todo._id.$oid + '?apiKey=' + this.apiKey,
+        return this.http.put(this.TodosUrl+"/"+todo._id.$oid+'?apiKey='+this.apiKey,
             JSON.stringify(todo), { headers: headers })
             .map(res => res.json());
     }
 
     deleteTodo(todoId){
-        return this.http.delete(this.TodosUrl + "/" + todoId+'?apiKey='+this.apiKey).map(res => res.json());
+        return this.http.delete(this.TodosUrl + "/?" + todoId+'?apiKey='+this.apiKey).map(res => res.json());
     }
 }

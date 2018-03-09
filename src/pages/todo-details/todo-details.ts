@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { TodoService } from './../../app/services/todo.service';
 import { TodosPage } from '../todos/todos';
+import { UpdateTodoPage } from './../update-todo/update-todo';
 
 @Component({
     selector: 'todo-details',
@@ -22,6 +23,12 @@ export class TodoDetailsPage {
             this.result = data;
         });
         this.navCtrl.push(TodosPage);
+    }
+
+    updateTodo(event,todo) {
+        this.navCtrl.push(UpdateTodoPage, {
+            todo: this.todo
+        });
     }
     
 }

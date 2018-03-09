@@ -1,3 +1,4 @@
+import { StatusBar } from '@ionic-native/status-bar';
 import { TodoService } from './../../app/services/todo.service';
 
 import { TodosPage } from './../todos/todos';
@@ -13,26 +14,20 @@ import { NavController, NavParams } from 'ionic-angular';
 export class UpdateTodoPage {
 
     public todo: any;
-    public priority: String;
-    public description: String;
+    
     public result: String;
  
     constructor(public navCtrl: NavController, public params: NavParams, private todoService:TodoService) {
             this.todo = params.get('todo');
-            //console.log("debuging here");
+            
     }
 
-    //this function is called when the user clicks the add button in the add page
     onSubmit() {
-        var todo = {
-            priority: this.priority,
-            description: this.description
-        }
-
-        this.todoService.updateTodo(todo).subscribe(data => {
+        console.log("debuging starts");
+        this.todoService.updateTodo(this.todo).subscribe(data => {
             this.result = data;
         });
-
-        this.navCtrl.push(TodosPage);
+        console.log("debuging ends");
+        this.navCtrl.push(TodoDetailsPage);
     }
 }

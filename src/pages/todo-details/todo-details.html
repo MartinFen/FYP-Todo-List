@@ -7,7 +7,6 @@
 </ion-header>
 
 <ion-content padding>
-    <form>
     <ion-card>
         <ion-card-header>
             <strong>{{todo.title}}</strong>
@@ -18,7 +17,7 @@
             <p><strong>Description </strong><br>{{todo.description}}</p>
             <br><br><br>
             <button ion-button color="danger" (click)="deleteTodo(todo._id.$oid)">Delete</button>
+            <button ion-button color="danger" (click)="updateTodo($event, todo)">Update</button>
         </ion-card-content>
     </ion-card>
-    </form>
 </ion-content>
