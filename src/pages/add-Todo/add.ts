@@ -22,11 +22,9 @@ export class AddPage {
             priority: this.priority,
             description: this.description
         }
-
         this.todoService.addTodo(todo).subscribe(data => {
             this.result = data;
         });
-
         this.navCtrl.push(TodosPage);
     }
 }

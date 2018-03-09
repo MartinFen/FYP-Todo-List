@@ -36,4 +36,8 @@ export class TodoService{
             JSON.stringify(todo), { headers: headers })
             .map(res => res.json());
     }
+
+    deleteTodo(todoId){
+        return this.http.delete(this.TodosUrl + "/" + todoId+'?apiKey='+this.apiKey).map(res => res.json());
+    }
 }
