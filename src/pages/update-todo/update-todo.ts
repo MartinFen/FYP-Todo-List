@@ -28,6 +28,6 @@ export class UpdateTodoPage {
             this.result = data;
         });
         console.log("debuging ends");
-        this.navCtrl.push(TodoDetailsPage);
+        this.navCtrl.push(TodosPage);
     }
 }

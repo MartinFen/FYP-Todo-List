@@ -3,7 +3,7 @@ import { Http, Headers, RequestOptions } from '@angular/http';
 import  "rxjs/Rx";
 
 @Injectable()
-export class TodoService{
+export class TodoService {
     http:any;
     apiKey: String;
     TodosUrl: String;
@@ -38,6 +38,6 @@ export class TodoService{
     }
 
     deleteTodo(todoId){
-        return this.http.delete(this.TodosUrl + "/?" + todoId+'?apiKey='+this.apiKey).map(res => res.json());
+        return this.http.delete(this.TodosUrl+"/"+todoId+'?apiKey='+this.apiKey).map(res => res.json());
     }
 }
