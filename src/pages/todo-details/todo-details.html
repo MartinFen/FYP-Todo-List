@@ -7,14 +7,16 @@
 </ion-header>
 
 <ion-content padding>
+    <form>
     <ion-card>
         <ion-card-header>
             <strong>{{todo.title}}</strong>
         </ion-card-header> 
         <ion-card-content>
-            <p><strong>Priority: </strong> {{todo.priority}}</p>
+            <p><strong>Priority </strong><br>{{todo.priority}}</p>
             <hr>
-            {{todo.description}}
+            <p><strong>Description </strong><br>{{todo.description}}</p>
         </ion-card-content>
     </ion-card>
+    </form>
 </ion-content>

@@ -15,7 +15,7 @@ export class AddPage {
 
     constructor(public navCtrl: NavController, private todoService: TodoService) {
     }
-
+    //this function is called when the user clicks the add button in the add page
     onSubmit(){
         var todo = {
             title: this.title,

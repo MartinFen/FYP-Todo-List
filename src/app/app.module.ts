@@ -9,6 +9,7 @@ import { AddPage } from '../pages/add-Todo/add';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TodosPage } from '../pages/todos/todos';
 import { TodoDetailsPage } from '../pages/todo-details/todo-details';
+import { UpdateTodoPage } from '../pages/update-todo/update-todo';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,6 +21,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AddPage,
     TodosPage,
     TodoDetailsPage,
+    UpdateTodoPage,
     TabsPage
   ],
   imports: [
@@ -34,6 +36,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AddPage,
     TodosPage,
     TodoDetailsPage,
+    UpdateTodoPage,
     TabsPage
   ],
   providers: [

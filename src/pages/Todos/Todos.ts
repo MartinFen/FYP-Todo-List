@@ -13,13 +13,13 @@ export class TodosPage {
     constructor(public navCtrl: NavController, private todoService:TodoService) {
 
     }
-    //this Observeable stores the retrived objects and stores them in the todos property
+    //this function stores the todo items retrived by the service from the db in property called todos
     ngOnInit(){
         this.todoService.getTodos().subscribe(todos => {
             this.todos = todos;
         });
     }
-    //this function is used to control navigation to the details page and to pass the data to be loaded
+    //this function is used to control navigation to the details page of the selected todo and pass the data to that page
     todoSelected(event, todo){
         this.navCtrl.push(TodoDetailsPage, {
             todo : todo

@@ -9,8 +9,9 @@ import { NavController, NavParams } from 'ionic-angular';
 export class TodoDetailsPage {
     public todo:any;
     public result:any;
+    
     constructor(public navCtrl: NavController, public params:NavParams, todoService:TodoService) {
-        this.todo = params.get('todo');//changed the get from todos to todo and it fixed the issue for data being displayed
+        this.todo = params.get('todo');
         //console.log("debuging here");
     }
 
