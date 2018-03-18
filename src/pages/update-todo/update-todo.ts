@@ -19,15 +19,15 @@ export class UpdateTodoPage {
  
     constructor(public navCtrl: NavController, public params: NavParams, private todoService:TodoService) {
             this.todo = params.get('todo');
-            
     }
 
     onSubmit() {
-        console.log("debuging starts");
+        //console.log("debuging starts");
         this.todoService.updateTodo(this.todo).subscribe(data => {
             this.result = data;
+            this.navCtrl.push(TodosPage);
         });
-        console.log("debuging ends");
-        this.navCtrl.push(TodosPage);
+        //console.log("debuging ends");
+        
     }
 }

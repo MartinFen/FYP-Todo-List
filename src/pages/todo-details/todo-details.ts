@@ -19,7 +19,7 @@ export class TodoDetailsPage {
     }
 
     deleteTodo(todoId){
-        console.log(todoId);
+        //console.log(todoId);
         this.todoService.deleteTodo(todoId).subscribe(data => { 
             this.result = data;
         });

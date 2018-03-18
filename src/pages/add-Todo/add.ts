@@ -24,7 +24,9 @@ export class AddPage {
         }
         this.todoService.addTodo(todo).subscribe(data => {
             this.result = data;
+            this.navCtrl.push(TodosPage);
         });
-        this.navCtrl.push(TodosPage);
+        
+        
     }
 }

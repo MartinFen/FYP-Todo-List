@@ -19,6 +19,13 @@ export class TodosPage {
             this.todos = todos;
         });
     }
+    //each time the todos page is opened/viewed the documents from the database are retrived
+    ionViewWillEnter(){
+        this.todoService.getTodos().subscribe(todos => {
+            this.todos = todos;
+        });
+    }
+
     //this function is used to control navigation to the details page of the selected todo and pass the data to that page
     todoSelected(event, todo){
         this.navCtrl.push(TodoDetailsPage, {
