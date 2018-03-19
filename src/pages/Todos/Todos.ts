@@ -13,13 +13,13 @@ export class TodosPage {
     constructor(public navCtrl: NavController, private todoService:TodoService) {
 
     }
-    //this function stores the todo items retrived by the service from the db in property called todos
+    //this function retrives the todo documents from the db when the app starts
     ngOnInit(){
         this.todoService.getTodos().subscribe(todos => {
             this.todos = todos;
         });
     }
-    //each time the todos page is opened/viewed the documents from the database are retrived
+    //each time the todos page is loaded the documents from the database are retrieved
     ionViewWillEnter(){
         this.todoService.getTodos().subscribe(todos => {
             this.todos = todos;

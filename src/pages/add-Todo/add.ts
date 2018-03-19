@@ -15,6 +15,7 @@ export class AddPage {
 
     constructor(public navCtrl: NavController, private todoService: TodoService) {
     }
+
     //this function is called when the user clicks the add button in the add page
     onSubmit(){
         var todo = {
@@ -24,9 +25,8 @@ export class AddPage {
         }
         this.todoService.addTodo(todo).subscribe(data => {
             this.result = data;
-            this.navCtrl.push(TodosPage);
+            
         });
-        
-        
+        this.navCtrl.push(TodosPage);
     }
 }

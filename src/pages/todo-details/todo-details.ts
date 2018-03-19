@@ -22,8 +22,9 @@ export class TodoDetailsPage {
         //console.log(todoId);
         this.todoService.deleteTodo(todoId).subscribe(data => { 
             this.result = data;
+            this.navCtrl.push(TodosPage);
         });
-        this.navCtrl.push(TodosPage);
+        
     }
 
     updateTodo(event,todo) {

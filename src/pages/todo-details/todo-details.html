@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar>
+    <ion-navbar color="dark">
         <ion-title>
             Todo Details
         </ion-title>
@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-card>
+    <ion-card color="dark">
         <ion-card-header>
             <strong>{{todo.title}}</strong>
         </ion-card-header> 
@@ -15,9 +15,9 @@
             <p><strong>Priority </strong><br>{{todo.priority}}</p>
             <hr>
             <p><strong>Description </strong><br>{{todo.description}}</p>
-            <br><br><br>
-            <button ion-button color="danger" (click)="deleteTodo(todo._id.$oid)">Delete</button>
-            <button ion-button color="danger" (click)="updateTodo($event, todo)">Update</button>
+            <br><br>
+            <button ion-button color="primary" (click)="deleteTodo(todo._id.$oid)" block>Delete</button>
+            <button ion-button color="primary" (click)="updateTodo($event, todo)" block>Update</button>
         </ion-card-content>
     </ion-card>
 </ion-content>

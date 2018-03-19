@@ -25,8 +25,9 @@ export class UpdateTodoPage {
         //console.log("debuging starts");
         this.todoService.updateTodo(this.todo).subscribe(data => {
             this.result = data;
-            this.navCtrl.push(TodosPage);
+            
         });
+        this.navCtrl.push(TodosPage);
         //console.log("debuging ends");
         
     }

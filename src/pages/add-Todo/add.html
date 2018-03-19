@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar>
+    <ion-navbar color="dark">
         <ion-title>
             Add Todo
         </ion-title>
@@ -9,24 +9,24 @@
 <ion-content padding>
     <form (submit)="onSubmit()">
         <ion-list>
-            <ion-item>
-                <ion-label fixed>Title</ion-label>
+            <ion-item color="dark">
+                <ion-label floating>Title</ion-label>
                 <ion-input [(ngModel)]="title" name="title" type="text"></ion-input>
             </ion-item>
-            <ion-item>
-                <ion-label fixed>Priority</ion-label>
+            <ion-item color="dark">
+                <ion-label floating>Priority</ion-label>
                 <ion-select [(ngModel)]="priority" name="priority">
-                    <ion-option value="low">Low</ion-option>
+                    <ion-option value="low" >Low</ion-option>
                     <ion-option value="medium">Medium</ion-option>
                     <ion-option value="high">High</ion-option>
                 </ion-select>
             </ion-item>
-            <ion-item>
-                <ion-label fixed>Description</ion-label>
-                <ion-input [(ngModel)]="description" name="description" type="text"></ion-input>
+            <ion-item color="dark">
+                <ion-label floating>Description</ion-label>
+                <ion-input [(ngModel)]="description" name="description" type="text" color="primary"></ion-input>
             </ion-item>
-            <ion-item>
-                <button ion-button type="submit" block>Add</button>
+            <ion-item color="dark">
+                <button ion-button type="submit" color="primary" block>Add</button>
             </ion-item>
         </ion-list>
     </form>
