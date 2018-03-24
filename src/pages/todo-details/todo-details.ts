@@ -1,6 +1,6 @@
 import { StatusBar } from '@ionic-native/status-bar';
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams} from 'ionic-angular';
 import { TodoService } from './../../app/services/todo.service';
 import { TodosPage } from '../todos/todos';
 import { UpdateTodoPage } from './../update-todo/update-todo';
@@ -15,18 +15,19 @@ export class TodoDetailsPage {
     
     constructor(public navCtrl: NavController, public params:NavParams, private todoService:TodoService) {
         this.todo = params.get('todo');
-        //console.log("debuging here");
     }
-
+    //when called this function deletes the choosen todo
     deleteTodo(todoId){
-        //console.log(todoId);
         this.todoService.deleteTodo(todoId).subscribe(data => { 
             this.result = data;
-            this.navCtrl.push(TodosPage);
+            //this.navCtrl.push(TodosPage);
+            this.navCtrl.popToRoot(TodosPage);
         });
+       
         
-    }
 
+    }
+    //when called this function updates the choosen todo
     updateTodo(event,todo) {
         this.navCtrl.push(UpdateTodoPage, {
             todo: this.todo

@@ -1,7 +1,7 @@
 <ion-header>
-    <ion-navbar color="dark">
+    <ion-navbar hideBackButton color="dark">
         <ion-title>
-            Todos
+            Todos - click on a title
         </ion-title>
     </ion-navbar>
 </ion-header>
@@ -10,7 +10,10 @@
     <ion-list>
         <ion-card>
             <ion-item *ngFor="let todo of todos" (click)="todoSelected($event, todo)" color="dark">
-                {{todo.title}}
+                {{todo.title}} 
+            </ion-item>
+            <ion-item color="dark">
+                <button ion-button color="primary" (click)="addTodo()" block>Add</button>
             </ion-item>
         </ion-card>
     </ion-list>

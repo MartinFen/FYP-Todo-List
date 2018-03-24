@@ -11,11 +11,11 @@
         <ion-list>
             <ion-item color="dark">
                 <ion-label floating>Title</ion-label>
-                <ion-input [(ngModel)]="title" name="title" type="text"></ion-input>
+                <ion-input [(ngModel)]="title" name="title" type="text" required></ion-input>
             </ion-item>
             <ion-item color="dark">
                 <ion-label floating>Priority</ion-label>
-                <ion-select [(ngModel)]="priority" name="priority">
+                <ion-select [(ngModel)]="priority" name="priority" required>
                     <ion-option value="low" >Low</ion-option>
                     <ion-option value="medium">Medium</ion-option>
                     <ion-option value="high">High</ion-option>
@@ -23,7 +23,7 @@
             </ion-item>
             <ion-item color="dark">
                 <ion-label floating>Description</ion-label>
-                <ion-input [(ngModel)]="description" name="description" type="text" color="primary"></ion-input>
+                <ion-input [(ngModel)]="description" name="description" type="text" color="primary" required></ion-input>
             </ion-item>
             <ion-item color="dark">
                 <button ion-button type="submit" color="primary" block>Add</button>

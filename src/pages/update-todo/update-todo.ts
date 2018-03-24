@@ -22,13 +22,10 @@ export class UpdateTodoPage {
     }
 
     onSubmit() {
-        //console.log("debuging starts");
         this.todoService.updateTodo(this.todo).subscribe(data => {
             this.result = data;
-            
-        });
-        this.navCtrl.push(TodosPage);
-        //console.log("debuging ends");
-        
+            //this.navCtrl.push(TodosPage);
+            this.navCtrl.popToRoot(TodosPage);
+        }); 
     }
 }
