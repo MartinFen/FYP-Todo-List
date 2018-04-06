@@ -1,7 +1,15 @@
 # Final Year Project - CRUD Todo List
 ###### Martin Fennell, G00291266
-#### How to use the application
-
-
-##### Documentation
-- I used a webapp called [dillenger.io](https://dillinger.io/) to created this documentation.
+###### [Design document(wiki)](https://github.com/MartinFen/Final-Year-Project/wiki)
+#### Installation & config guide
+#### How use the application (user guide)
+#### Demo
+	
+	
+	
+	
+	
+	
+	
+	
+	
