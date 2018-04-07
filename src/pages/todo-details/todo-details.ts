@@ -21,7 +21,7 @@ export class TodoDetailsPage {
         this.todoService.deleteTodo(todoId).subscribe(data => { 
             this.result = data;
             //this.navCtrl.push(TodosPage);
-            this.navCtrl.popToRoot(TodosPage);
+            this.navCtrl.popTo(TodosPage);
         });
        
         

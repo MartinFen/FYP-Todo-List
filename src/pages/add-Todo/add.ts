@@ -1,8 +1,7 @@
+import { Component } from '@angular/core';
+import { NavController, ViewController } from 'ionic-angular';
 import { TodosPage } from './../todos/todos';
 import { TodoService } from './../../app/services/todo.service';
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { ViewController } from 'ionic-angular';
 
 @Component({
     selector: 'add-Todo',
@@ -14,7 +13,9 @@ export class AddPage {
     public description: String;
     public result: String;
 
-    constructor(public navCtrl: NavController, public viewCtrl: ViewController, private todoService: TodoService) {
+    
+
+    constructor(public navCtrl: NavController, private todoService: TodoService) {
     }
 
     //this function is called when the user clicks the add button in the add page
@@ -26,10 +27,9 @@ export class AddPage {
         }
         this.todoService.addTodo(todo).subscribe(data => {
             this.result = data;
+            this.navCtrl.popTo(TodosPage);
             //this.navCtrl.push(TodosPage);
-            this.navCtrl.popToRoot(TodosPage);
-        });
-        
-        
+            //this.navCtrl.popToRoot(TodosPage);
+        });   
     }
 }

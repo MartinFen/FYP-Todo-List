@@ -11,11 +11,11 @@
         <ion-list>
             <ion-item color="dark">
                 <ion-label floating>Title</ion-label>
-                <ion-input [(ngModel)]="todo.title" name="title" type="text" required></ion-input>
+                <ion-input required [(ngModel)]="todo.title" name="title" type="text" required></ion-input>
             </ion-item>
             <ion-item color="dark">
                 <ion-label floating>Priority</ion-label>
-                <ion-select [(ngModel)]="todo.priority" name="priority" required>
+                <ion-select required [(ngModel)]="todo.priority" name="priority">
                     <ion-option value="low">Low</ion-option>
                     <ion-option value="medium">Medium</ion-option>
                     <ion-option value="high">High</ion-option>
@@ -23,7 +23,7 @@
             </ion-item>
             <ion-item color="dark">
                 <ion-label floating>Description</ion-label>
-                <ion-input [(ngModel)]="todo.description" name="description" type="text" color="primary" required></ion-input>
+                <ion-textarea required [(ngModel)]="todo.description" name="description" type="text" color="primary"></ion-textarea>
             </ion-item>
             <ion-item color="dark">
                 <button ion-button type="submit" color="primary" block>Update</button>
