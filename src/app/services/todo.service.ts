@@ -7,13 +7,12 @@ export class TodoService {
     http:any;
     apiKey: String;
     TodosUrl: String;
-    //constructor with values that will be used by http requests to the DB
+    //constructor containing values that will be used by http requests to allow access the the mLab database
     constructor(http:Http){
         this.http = http;
         this.apiKey = 'VsOmLzX82en7icOW1YvhJ3be96QHLd14';
         this.TodosUrl = 'https://api.mlab.com/api/1/databases/mytododb/collections/Todos';
     }
-
     //method used for reading todo items from the DB
     //the data from the db is returned in json format
     getTodos(){

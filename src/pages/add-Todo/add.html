@@ -7,14 +7,14 @@
 </ion-header>
 
 <ion-content padding>
-        <form (submit)="onSubmit()">
+        <form [formGroup]="authForm" (submit)="onSubmit()">
             <ion-item color="dark">
                 <ion-label floating>Title</ion-label>
-                <ion-input required [(ngModel)]="title" name ="title" type="text"></ion-input>
+                <ion-input required formControlName="title" type="text"></ion-input>
             </ion-item>
             <ion-item color="dark">
                 <ion-label floating>Priority</ion-label>
-                <ion-select required [(ngModel)]="priority" name ="priority" color="primary">
+                <ion-select required formControlName="priority" color="primary">
                     <ion-option value="low" >Low</ion-option>
                     <ion-option value="medium">Medium</ion-option>
                     <ion-option value="high">High</ion-option>
@@ -22,10 +22,10 @@
             </ion-item>
             <ion-item color="dark">
                 <ion-label floating>Description</ion-label>
-                <ion-textarea required [(ngModel)]="description" name="description" type="text" color="primary"></ion-textarea>
+                <ion-textarea required formControlName="description" type="text" color="primary"></ion-textarea>
             </ion-item>
             <ion-item color="dark">
-                <button ion-button type="submit" color="primary" block>Add</button>
+                <button ion-button type="submit" [disabled]="!authForm.valid" color="primary" block>Add</button>
             </ion-item>
         </form>
 </ion-content>
