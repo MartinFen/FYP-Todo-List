@@ -33,7 +33,7 @@ Or
 - To run the app type `ionic lab` or `ionic serve` in Cmder and press enter.
 
 #### Using the app
-- The see how the app is used watch the demo by clicking the link below or alternativly read the [features](https://github.com/MartinFen/Final-Year-Project/wiki/06.-Features-of-the-Implementation) section of the wiki.
+- The see how the app is used watch the demo video by clicking the link below or alternativly read the [features](https://github.com/MartinFen/Final-Year-Project/wiki/06.-Features-of-the-Implementation) section of the wiki which shows how the app is supposed to be used.
 
 #### Demo
-- [![Demo video](https://github.com/MartinFen/Final-Year-Project/blob/master/pictures/Todo%20Titles.PNG)](https://youtu.be/39WOJlICQZY)
+- [Demo video](https://youtu.be/39WOJlICQZY)
