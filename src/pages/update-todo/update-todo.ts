@@ -18,6 +18,8 @@ export class UpdateTodoPage {
     public result: String;
     public authForm: FormGroup;
 
+    //constructor that when called at the start of the class initilizing gets the selected todos values and sets them to the todo object in this class
+    //the values are then passed into the the form
     constructor(public navCtrl: NavController, public params: NavParams, private todoService: TodoService, public fb: FormBuilder) {
             this.todo = params.get('todo');
             this.authForm = this.fb.group
@@ -28,7 +30,8 @@ export class UpdateTodoPage {
             });
             
     }
-
+    //when the user has clicked the update button the values in the form are added to the todo document and the updateTodo() function is used from the provider
+    //the request set to the database is a put request which will update the selected todo document
     onSubmit() {
         this.todo.title = this.authForm.controls.title.value;
         this.todo.priority = this.authForm.controls.priority.value;
@@ -36,9 +39,8 @@ export class UpdateTodoPage {
         
         this.todoService.updateTodo(this.todo).subscribe(data => {
             this.result = data;
-            //this.navCtrl.push(TodosPage);
             this.navCtrl.popTo(TodosPage);
         });
-        console.log(this.authForm.value); 
+        //console.log(this.authForm.value); 
     }
 }

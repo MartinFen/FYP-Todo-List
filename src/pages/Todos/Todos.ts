@@ -14,13 +14,13 @@ export class TodosPage {
 
     constructor(public navCtrl: NavController, private todoService: TodoService, private viewCtrl: ViewController) {
     }
-    //this function retrives the todo documents from the db when the app starts
+    //this function is called oncewhen the app starts it retrives the todo documents from the database when the app starts
     ngOnInit(){
         this.todoService.getTodos().subscribe(todos => {
             this.todos = todos;
         });
     }
-    //each time the todos page is about to be loaded this function will run it gets the documents from the database are retrieved
+    //each time the todos page is about to be loaded this function will run it gets the documents from the database
     ionViewWillEnter(){
         this.todoService.getTodos().subscribe(todos => {
             this.todos = todos;
@@ -34,7 +34,7 @@ export class TodosPage {
             todo : todo
         });  
     }
-    //when called the add page will be loaded
+    //when called the add page will be loaded by pushing the add page onto the nav stack
     addTodo(){
         this.navCtrl.push(AddPage);  
     }
