@@ -6,9 +6,9 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="background">
     <form [formGroup]="authForm" (submit)="onSubmit()">
-        <ion-list>
+        <ion-card>
             <ion-item color="dark">
                 <ion-label floating>Title</ion-label>
                 <ion-input required formControlName="title" type="text"></ion-input>
@@ -17,7 +17,7 @@
                 <ion-label floating>Priority</ion-label>
                 <ion-select required formControlName="priority" color="primary">
                     <ion-option value="low">Low</ion-option>
-                    <ion-option value="medium">Medium</ion-option>
+                    <ion-option value="medium">Medium</ion-option>                        
                     <ion-option value="high">High</ion-option>
                 </ion-select>
             </ion-item>
@@ -26,8 +26,8 @@
                 <ion-textarea required formControlName="description" type="text" color="primary"></ion-textarea>
             </ion-item>
             <ion-item color="dark">
-                <button ion-button type="submit" [disabled]="!authForm.valid" color="primary" block>Update</button>
+                <button ion-button type="submit" [disabled]="!authForm.valid" color="danger" block outline>Update</button>
             </ion-item>
-        </ion-list>
+        </ion-card>
     </form>
 </ion-content>

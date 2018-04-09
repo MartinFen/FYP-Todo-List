@@ -6,14 +6,16 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="background">
     <ion-list>
         <ion-card>
-            <ion-item *ngFor="let todo of todos" (click)="todoSelected($event, todo)" color="dark">
-                {{todo.title}} 
+            <ion-item *ngFor="let todo of todos" color="dark">    
+                <ion-item (click)="todoSelected($event, todo)" color="danger" text-center>
+                    <strong>{{todo.title}}</strong>
+                </ion-item>
             </ion-item>
             <ion-item color="dark">
-                <button ion-button color="primary" (click)="addTodo()" block>Add</button>
+                <button ion-button (click)="addTodo()" color="danger" block outline>Add</button>
             </ion-item>
         </ion-card>
     </ion-list>
