@@ -17,8 +17,8 @@
             <p><strong>Description </strong><br>{{todo.description}}</p>
         </ion-card-content>
         <ion-item color="dark">
-            <button ion-button color="secondary" block outline (click)="updateTodo($event, todo)"><strong>Update</strong></button>
-            <button ion-button color="secondary" block outline (click)="deleteTodo(todo._id.$oid)"><strong>Delete</strong></button>
+            <button ion-button large color="secondary" block outline (click)="updateTodo($event, todo)" block outline><strong>Update</strong></button>
+            <button ion-button large color="secondary" block outline (click)="deleteTodo(todo._id.$oid)" block outline><strong>Delete</strong></button>
         </ion-item>
     </ion-card>
 </ion-content>
