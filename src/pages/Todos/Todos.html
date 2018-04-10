@@ -10,12 +10,12 @@
     <ion-list>
         <ion-card>
             <ion-item *ngFor="let todo of todos" color="dark">    
-                <ion-item (click)="todoSelected($event, todo)" color="danger" text-center>
+                <ion-item (click)="todoSelected($event, todo)" color="primary" text-center>
                     <strong>{{todo.title}}</strong>
                 </ion-item>
             </ion-item>
             <ion-item color="dark">
-                <button ion-button (click)="addTodo()" color="danger" block outline>Add</button>
+                <button ion-button (click)="addTodo()" color="secondary" block outline>Add</button>
             </ion-item>
         </ion-card>
     </ion-list>
